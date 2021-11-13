@@ -44,25 +44,26 @@ class _HomePageState extends State<HomePage> {
           child: ListView.separated(
             itemBuilder: (BuildContext context, int index) {
               return ListTile(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) {
-                          return InfoPage(item: categoria.elementAt(index));
-                        },
-                      ),
-                    );
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return InfoPage(item: categoria.elementAt(index));
+                      },
+                    ),
+                  );
+                },
+                title: Text(categoria.elementAt(index)),
+                trailing: NeumorphicCheckbox(
+                  value: checked[index],
+                  onChanged: (value) {
+                    setState(() {
+                      checked[index] = value;
+                    });
                   },
-                  title: Text(categoria.elementAt(index)),
-                  trailing: NeumorphicCheckbox(
-                    value: checked[index],
-                    onChanged: (value) {
-                      setState(() {
-                        checked[index] = value;
-                      });
-                    },
-                  ));
+                ),
+              );
             },
             itemCount: categoria.length,
             separatorBuilder: (BuildContext context, int index) {

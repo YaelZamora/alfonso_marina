@@ -13,27 +13,17 @@ class LoginPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Container(
-          width: double.infinity,
-          height: double.infinity,
+        child: Neumorphic(
+          style: const NeumorphicStyle(
+            color: Colors.white,
+            shape: NeumorphicShape.concave,
+          ),
           margin: const EdgeInsets.symmetric(
             horizontal: 20,
             vertical: 30,
           ),
           padding: const EdgeInsets.symmetric(
             horizontal: 15,
-          ),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: const Color(0xffF5F5F5),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.grey,
-                offset: Offset(0, 0),
-                blurRadius: 20,
-                spreadRadius: 2,
-              ),
-            ],
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
