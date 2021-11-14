@@ -49,9 +49,7 @@ class _InfoPageState extends State<InfoPage> {
                   return ListTile(
                     title: Text(preguntas.elementAt(index)),
                     trailing: NeumorphicCheckbox(
-                      style: const NeumorphicCheckboxStyle(
-                        boxShape: NeumorphicBoxShape.circle(),
-                      ),
+                      style: const NeumorphicCheckboxStyle(),
                       value: checked[index],
                       onChanged: (value) {
                         setState(() {
