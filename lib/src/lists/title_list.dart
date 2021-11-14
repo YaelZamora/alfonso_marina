@@ -4,4 +4,9 @@ List<String> titleList = [
   'Sala',
   'Cuarto',
   'Jardín',
+  'Estancia',
+  'Estancia',
+  'Estancia',
+  'Estancia',
+  'Estancia',
 ];
